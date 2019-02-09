@@ -16,4 +16,4 @@ Demo you can see, if you click [here].
 ### Result:
 ![home](https://github.com/scandy5/crud/blob/master/img/crud.png)
 
-[here]: https://scandy5.github.io/crud/index.html
+[here]: https://scandy5.github.io/crud/client/index.html
