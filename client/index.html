@@ -46,19 +46,37 @@
 	</div>
 
 	<header class="header">
-		<nav aria-label="..." style="margin: 20px">
-			<ul class="pagination pagination-sm">
-				<li class="page-item active" id="limit-5"><button class="page-link limit-5">5</button></li>
-				<li class="page-item" id="limit-10"><button class="page-link limit-10">10</button></li>
-				<li class="page-item" id="limit-15"><button class="page-link limit-15">15</button></li>
-			</ul>
-		</nav>
+		<div class="row w-100">
 
-		<input type="text" name="users_search" id="users_search" class="form-control" placeholder="Search..." style="margin: 20px; width: 70%;">
+			<div class="col-sm-2 col-4">
+				<nav aria-label="..." style="margin: 20px">
+					<ul class="pagination pagination-sm">
+						<li class="page-item active" id="limit-5"><button class="page-link limit-5 header__pagination">5</button>
+						</li>
+						<li class="page-item" id="limit-10"><button class="page-link limit-10 header__pagination">10</button></li>
+						<li class="page-item" id="limit-15"><button class="page-link limit-15 header__pagination">15</button></li>
+					</ul>
+				</nav>
+			</div>
 
-		<button type="button" style="margin: 20px" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-			Add user
-		</button>
+			<div class="col-sm-7 col-4">
+				<input type="text" name="users_search" id="users_search" class="form-control header__search"
+					placeholder="Search..." style="margin: 20px;">
+			</div>
+
+			<div class="col-sm-3 col-4" style="text-align: end;">
+				<button type="button" style="margin: 20px" class="btn btn-primary header__button" data-toggle="modal"
+					data-target="#exampleModal">
+					Add user
+				</button>
+			</div>
+
+		</div>
+
+
+
+
+
 	</header>
 
 	<div class="table-container">

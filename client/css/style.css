@@ -2,6 +2,9 @@
 	display: flex;
 	justify-content: space-between;
 }
+.header__button, .header__search, .header__pagination {
+	height: 40px !important;
+}
 .form-control {
 	margin-bottom: 15px;
 }
