@@ -6,6 +6,18 @@ export class TableUsers {
 		this.users = users;
 		this.page = 1;
 		this.appBackend = new AppBackend();
+		this.search = '';
+
+		document.getElementById("users_search").addEventListener("keyup", async (event) => {
+			// 13 - 'enter' key
+			if (event.which === 13) {
+				this.search = event.target.value;
+				await this.loadUsers();
+				this.render();
+				console.log(this.search);
+				
+			}
+		});
 
 		document.addEventListener('click', async (event) => {
 
@@ -48,7 +60,7 @@ export class TableUsers {
 				await this.giveActiveClasseToCurrentLimit(this.selectedLimit);
 			}
 
-			if(event.target.matches('#add-user')) {
+			if (event.target.matches('#add-user')) {
 				let userName = await document.querySelector('.input-name').value;
 				let userEmail = await document.querySelector('.input-email').value;
 				let userDescription = await document.querySelector('.input-description').value;
@@ -63,7 +75,7 @@ export class TableUsers {
 			}
 		});
 	}
-	
+
 	async giveActiveClasseToCurrentLimit(limit) {
 		document.getElementById('limit-5').classList.remove('active');
 		document.getElementById('limit-10').classList.remove('active');
@@ -78,7 +90,8 @@ export class TableUsers {
 
 		this.users = await this.appBackend.get({
 			page: this.page,
-			limit: this.selectedLimit
+			limit: this.selectedLimit,
+			search: this.search
 		});
 	};
 

@@ -15,17 +15,16 @@ app.use(express.json());
 app.use(cors());
 
 app.get('/users', function (req, res) {
-	let { limit, page } = req.query;
-
-	let users = (db.get('users'));
+	let allUsers = db.get('users').value();
+	let { limit, page, search } = req.query;
 	limit = Number(limit);
 	page = Number(page);
+	search = search;
+	
 
-	if (limit > 0 && page > 0) {
-		users = users.value().slice((page * limit) - 1, (page + 1) * limit);
-	};
-
-	res.send(users);
+	let filteredUsers = allUsers.filter(x => x.name.toLowerCase().indexOf(search.toLowerCase()) >= 0);
+	
+	res.send(filteredUsers.slice(page * limit, (page + 1) * limit));
 });
 
 app.post('/users', (req, res) => {

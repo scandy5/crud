@@ -7,8 +7,8 @@ export class AppBackend {
 		return window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
 	}
 
-	get({ page = 1, search, limit = 5 }) {
-		return fetch(`${this.baseUrl}/users?page=${page}&limit=${limit}`)
+	get({ page = 1, search = '', limit = 5 }) {
+		return fetch(`${this.baseUrl}/users?page=${page}&limit=${limit}&search=${search}`)
 			.then((response) => response.json());
 	}
 
