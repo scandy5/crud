@@ -15,6 +15,6 @@ Demo you can see, if you click [here].
  - `git clone https://github.com/scandy5/crud`
 
 ### Result:
-![home](https://github.com/scandy5/crud/blob/master/client/img/crud.png)
+![home](https://github.com/scandy5/crud/blob/master/client/img/crud.jpg)
 
 [here]: https://scandy5.github.io/crud/client/index.html
