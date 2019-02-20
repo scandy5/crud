@@ -1,0 +1,10 @@
+.button {
+	margin-left: 10px;
+	padding: 5px 20px;
+	display: block;
+	width: 100%;
+}
+.button-wrapper {
+	width: 100%;
+	display: flex;
+}

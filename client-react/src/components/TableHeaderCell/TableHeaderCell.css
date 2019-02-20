@@ -1,0 +1,17 @@
+.table-header-cell {
+	display: flex;
+	justify-content: space-between;
+}
+.table-header-cell__arrows {
+	display: flex;
+	flex-direction: column;
+	margin: auto 0;
+}
+.table-header-cell__arrow {
+	color: #ccc;
+	line-height: 0.3;
+	cursor: pointer;
+}
+.table-header-cell__arrow_active {
+	color: #000
+}
